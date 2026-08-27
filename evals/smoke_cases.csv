@@ -1,0 +1,9 @@
+text,expected_category,expected_subcategory,expected_priority,expected_human_review
+배송 완료라고 나오는데 상품을 못 받았어요,배송,배송완료 미수령,high,true
+같은 주문이 카드에서 두 번 결제됐습니다,주문/결제,중복 결제,high,true
+제품 병이 깨져서 내용물이 다 샜어요,교환/반품,파손,high,true
+취소한 지 일주일인데 아직 돈이 안 들어왔어요,취소/환불,환불 지연,high,true
+제가 주문한 크림 대신 다른 제품이 왔어요,교환/반품,오배송 상품,high,true
+이 제품은 다른 세럼이랑 같이 써도 되나요,상품정보,호환/적합성,normal,false
+배송이 어디쯤 왔는지 확인하고 싶어요,배송,배송 조회,normal,false
+제 개인정보가 다른 고객에게 노출된 것 같습니다,클레임/기타,개인정보/보안,critical,true
