@@ -4,173 +4,169 @@ AI-powered VOC intelligence and CX operations system for customer support analys
 
 ## Goal
 
-Transform raw customer support conversations into structured VOC insights that support:
+Turn customer-support conversations into structured VOC signals that can be classified, evaluated, reviewed, and eventually used for trend / root-cause / CX operations workflows.
 
-- VOC classification
-- Trend detection
-- Root-cause analysis
-- 상담 품질(QA) 평가
-- Human handoff 판단
-- Weekly CX reporting
+## Version roadmap
 
-## v0.1 MVP
+### v0.1 — VOC classifier
 
-1. Upload VOC CSV
-2. Classify each inquiry with a fixed VOC taxonomy
-3. Return category / subcategory / priority / sentiment
-4. Flag cases requiring human review
-5. Export classified results
+- fixed VOC taxonomy
+- OpenAI Responses API + strict Structured Outputs
+- priority / sentiment / human-review decision
+- CSV batch analysis with row-level failure isolation
+- measured token usage
 
-## v0.2 Evaluation & Model Improvement
+### v0.2 — Evaluation & model improvement
 
-v0.2 adds a repeatable evaluation loop instead of adding more AI features.
-
-- 200-row synthetic/provisional evaluation seed covering all 38 subcategories
-- Major category Accuracy / Macro Precision / Recall / F1
-- Subcategory Accuracy / Macro Precision / Recall / F1
+- 200-row synthetic/provisional seed covering all 38 subcategories
+- Major and Subcategory Accuracy / Macro Precision / Recall / F1
 - High-risk Precision / Recall
 - Human Review Precision / Recall / F1
-- Major and subcategory confusion matrices
-- Per-subcategory metrics
-- Editable error-analysis workflow
-- Model / prompt / taxonomy / dataset provenance
-- Aggregated measured token usage
-- Baseline-vs-candidate run comparison
+- confusion matrices and per-subcategory metrics
+- editable error analysis
+- dataset / prompt / taxonomy / model provenance
+- baseline-vs-candidate comparison
 
-The 200-row seed is **not a publishable gold benchmark yet**. Every row starts with
-`label_status=provisional`. Portfolio metrics are calculated by default only from
-rows that a person has reviewed and changed to `label_status=reviewed`.
+The v0.2 seed is **not a publishable gold benchmark yet**. Rows start as `label_status=provisional`; publishable metrics are calculated only from rows that a person has reviewed and promoted to `label_status=reviewed`.
 
-See `docs/v0.2_evaluation.md`.
+### v0.3 — Pilot-ready web app
+
+- dedicated **Pilot Test** page for one-VOC-at-a-time testing
+- tester `Correct / Incorrect` feedback with corrected category, subcategory, priority, sentiment, and human-review label
+- common email / phone / long-number patterns masked before the Pilot API call and before feedback persistence
+- per-session single-test limit and configurable CSV batch limit
+- session feedback CSV download
+- optional persistent feedback through Supabase
+- public app uses an INSERT-only anon policy; no anonymous feedback read access
+- trusted local exporter converts persisted feedback into a `provisional` review queue
+- tester feedback is never promoted to gold automatically
+
+See `docs/v0.3_pilot.md` and `docs/supabase_pilot_feedback.sql`.
 
 ## Current UI
 
-The Streamlit prototype includes:
-
 - Dashboard
+- Pilot Test
 - VOC Analyzer
 - Taxonomy
 - Evaluation Lab
 
-## AI classifier
-
-The v0.1 classifier uses the OpenAI Responses API with Structured Outputs.
-
-- Default model: `gpt-5.6-luna`
-- Output is constrained by a strict JSON Schema derived from the canonical taxonomy
-- Category/subcategory pairs and every auxiliary label are validated again in application code
-- High-risk cases are deterministically forced to human review after model output
-- API requests use `store=False`
-- Failed rows retain their original input and are isolated with `analysis_status` and `analysis_error`
-- Successful rows retain measured token usage and the response model
-
-## Run locally
+## Local run
 
 Python 3.11 or newer is recommended.
 
-### Windows PowerShell
+```bash
+python -m venv .venv
+```
+
+Windows PowerShell:
 
 ```bash
-py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-### macOS / Linux
+macOS / Linux:
 
 ```bash
-python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 cp .env.example .env
 ```
 
-Edit the local `.env` file and replace the placeholder key:
+Set a local API key in `.env`:
 
 ```text
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=...
 OPENAI_MODEL=gpt-5.6-luna
 OPENAI_REASONING_EFFORT=none
 ```
 
-`.env` is ignored by Git. Never commit or paste a real API key into source files.
-
-Start Streamlit from the repository root:
+Run:
 
 ```bash
 streamlit run app/main.py
 ```
 
-Run unit tests without a live API call:
+## Tests and evaluation
+
+Unit tests do not require a live API key:
 
 ```bash
 pytest
 ```
 
-Run the hand-labeled live smoke cases after configuring an API key:
+Eight-case live smoke test:
 
 ```bash
 python -m evals.live_smoke_test
 ```
 
-Run the v0.2 evaluation seed:
+Reviewed-label evaluation:
 
 ```bash
 python -m evals.run_gold_eval
 ```
 
-The default command saves predictions but will not calculate publishable metrics while
-the seed labels remain provisional.
-
-For development-only pipeline checks:
+Exploratory provisional evaluation only:
 
 ```bash
 python -m evals.run_gold_eval --include-provisional
 ```
 
-Any metrics produced with `--include-provisional` are exploratory and must not be
-presented as portfolio performance.
-
-Compare two evaluation summaries:
+Compare two evaluation runs:
 
 ```bash
 python -m evals.compare_runs evals/results/<baseline>_summary.json evals/results/<candidate>_summary.json
 ```
 
-## Result columns
+## Pilot feedback persistence
 
-The analyzer preserves every input column and appends classification, operational, and usage fields:
+The Pilot Test works without a database, but feedback is then limited to the current Streamlit session and should be downloaded before the session ends.
 
-- `category`, `subcategory`, `priority`, `sentiment`, `requires_human_review`, `reason`
-- `analysis_status`, `analysis_error`
-- `input_tokens`, `cached_input_tokens`, `output_tokens`, `model`
-- `estimated_cost_usd` only when all three dated token-price environment variables are configured
-
-Evaluation runs additionally preserve explicit dataset/prompt/taxonomy versions.
-
-## Project Structure
+For persistent feedback, configure a Supabase project using:
 
 ```text
-app/        Application code
-data/       Sample and processed datasets
-docs/       CX/VOC design documents
-evals/      Versioned evaluation datasets, runners, and result artifacts
-tests/      Automated tests
+docs/supabase_pilot_feedback.sql
 ```
 
-## Data Policy
+Public app configuration:
 
-This project uses public or synthetic customer-support data only.
-No confidential customer data or former-employer proprietary data is included.
+```text
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
+SUPABASE_FEEDBACK_TABLE=pilot_feedback
+```
+
+Never put a service-role key in the public app.
+
+On a trusted local/admin machine, export feedback for manual review with:
+
+```bash
+python -m evals.export_pilot_feedback
+```
+
+The generated `pilot_feedback_review_queue.csv` is always `label_status=provisional` until manually reviewed.
+
+## Pilot safety defaults
+
+```text
+PILOT_MAX_BATCH_ROWS=100
+PILOT_MAX_TEXT_CHARS=4000
+PILOT_MAX_SINGLE_ANALYSES_PER_SESSION=20
+```
+
+These are pilot safeguards, not production-grade internet rate limiting. Use synthetic or de-identified VOC only; never upload confidential former-employer customer data.
+
+## Data policy
+
+This repository uses public, synthetic, or deliberately de-identified data only. No real former-employer customer records or proprietary customer information should be used.
 
 ## Cost notes
 
-See `docs/api_costs.md` for pricing assumptions and the measurement plan. Token counts are measured from each API response. A cost remains an estimate calculated from operator-supplied, dated prices and must not be presented as business performance.
+Token counts are measured from API responses. Cost is calculated only when dated operator-supplied token prices are configured. No estimated cost, accuracy, recall, ROI, or business impact is presented as a measured project result unless it has actually been observed.
 
 ## Status
 
-v0.1 classifier hardening is implemented. v0.2 evaluation infrastructure and a 200-row
-synthetic/provisional seed are implemented on the evaluation branch. Live model quality
-metrics still require an API key and human-reviewed labels; no accuracy or ROI result is
-claimed in this repository.
+v0.1 classifier hardening, v0.2 evaluation infrastructure, and v0.3 pilot feedback workflow are implemented on their feature branches. Live performance metrics still require a configured API key and human-reviewed labels.
