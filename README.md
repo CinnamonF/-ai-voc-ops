@@ -21,6 +21,22 @@ Transform raw customer support conversations into structured VOC insights that s
 4. Flag cases requiring human review
 5. Export classified results
 
+## Current UI
+
+The Streamlit prototype now includes:
+
+- Dashboard
+- VOC Analyzer
+- Taxonomy
+- Evaluation
+
+Run locally with:
+
+```bash
+pip install -r requirements.txt
+streamlit run app/main.py
+```
+
 ## Project Structure
 
 ```text
@@ -38,4 +54,4 @@ No confidential customer data or former-employer proprietary data is included.
 
 ## Status
 
-🚧 Work in progress — v0.1 scaffold
+🚧 Work in progress — v0.1 UI and taxonomy implemented; AI classifier implementation is next.
