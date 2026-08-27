@@ -79,14 +79,25 @@ def test_invalid_category_subcategory_pair_is_rejected(monkeypatch):
         classifier.classify_voc("테스트 문의")
 
 
-def test_high_risk_result_is_forced_to_human_review(monkeypatch):
+@pytest.mark.parametrize(
+    ("category", "subcategory"),
+    [
+        ("주문/결제", "중복 결제"),
+        ("취소/환불", "환불 지연"),
+    ],
+)
+def test_high_risk_result_is_forced_to_human_review(
+    monkeypatch,
+    category,
+    subcategory,
+):
     fake_result = {
-        "category": "주문/결제",
-        "subcategory": "중복 결제",
+        "category": category,
+        "subcategory": subcategory,
         "priority": "normal",
         "sentiment": "negative",
         "requires_human_review": False,
-        "reason": "동일 주문이 두 번 결제됐습니다.",
+        "reason": "금전 확인이 필요한 고위험 문의입니다.",
     }
     monkeypatch.setattr(
         classifier,
@@ -94,7 +105,7 @@ def test_high_risk_result_is_forced_to_human_review(monkeypatch):
         lambda **kwargs: structured(fake_result),
     )
 
-    result = classifier.classify_voc("같은 주문이 두 번 결제됐어요")
+    result = classifier.classify_voc("금전 확인이 필요한 문의")
 
     assert result["requires_human_review"] is True
 
