@@ -12,13 +12,13 @@ st.info(
 
 for category, items in TAXONOMY_DETAILS.items():
     with st.expander(f"{category} · {len(items)} subcategories"):
-        st.dataframe(pd.DataFrame(items), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(items), width="stretch", hide_index=True)
 
 st.subheader("Priority Rules")
 priority_df = pd.DataFrame(
     [{"priority": key, "definition": value} for key, value in PRIORITY_RULES.items()]
 )
-st.dataframe(priority_df, use_container_width=True, hide_index=True)
+st.dataframe(priority_df, width="stretch", hide_index=True)
 
 st.subheader("Human Review Rules")
 for rule in HUMAN_REVIEW_RULES:

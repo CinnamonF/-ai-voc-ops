@@ -37,7 +37,7 @@ metrics = pd.DataFrame(
         },
     ]
 )
-st.dataframe(metrics, use_container_width=True, hide_index=True)
+st.dataframe(metrics, width="stretch", hide_index=True)
 
 st.subheader("Evaluation Workflow")
 st.markdown(
@@ -53,4 +53,4 @@ if eval_path.exists():
     eval_df = pd.read_csv(eval_path)
     st.subheader("Current Gold Dataset")
     st.caption(f"현재 seed label: {len(eval_df):,}건")
-    st.dataframe(eval_df.head(20), use_container_width=True, hide_index=True)
+    st.dataframe(eval_df.head(20), width="stretch", hide_index=True)

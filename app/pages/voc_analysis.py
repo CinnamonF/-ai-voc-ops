@@ -3,18 +3,8 @@ import io
 import pandas as pd
 import streamlit as st
 
-from services.classifier import classify_voc
-from services.llm import get_model_name, is_api_configured
-
-ANALYSIS_COLUMNS = [
-    "category",
-    "subcategory",
-    "priority",
-    "sentiment",
-    "requires_human_review",
-    "reason",
-    "analysis_error",
-]
+from app.services.batch import analyze_batch, summarize_results
+from app.services.llm import get_model_name, is_api_configured
 
 
 def read_uploaded_csv(uploaded_file) -> pd.DataFrame:
@@ -53,7 +43,7 @@ if uploaded_file is not None:
         st.stop()
 
     st.subheader("Input preview")
-    st.dataframe(raw_df.head(20), use_container_width=True, hide_index=True)
+    st.dataframe(raw_df.head(20), width="stretch", hide_index=True)
 
     message_column = st.selectbox(
         "Customer message column",
@@ -63,7 +53,7 @@ if uploaded_file is not None:
         else 0,
     )
 
-    if st.button("Analyze VOC", type="primary", use_container_width=True):
+    if st.button("Analyze VOC", type="primary", width="stretch"):
         if not is_api_configured():
             st.error(
                 "OPENAI_API_KEY가 없어 분석을 시작할 수 없습니다. "
@@ -71,48 +61,30 @@ if uploaded_file is not None:
             )
             st.stop()
 
-        predictions = []
-        messages = raw_df[message_column].fillna("").astype(str).tolist()
         progress = st.progress(0, text="VOC를 구조화하고 있습니다...")
 
-        for index, text in enumerate(messages, start=1):
-            try:
-                result = classify_voc(text)
-                result["analysis_error"] = None
-            except Exception as exc:
-                result = {
-                    "category": None,
-                    "subcategory": None,
-                    "priority": None,
-                    "sentiment": None,
-                    "requires_human_review": True,
-                    "reason": None,
-                    "analysis_error": str(exc)[:300],
-                }
-            predictions.append(result)
+        def update_progress(index: int, total: int) -> None:
             progress.progress(
-                index / len(messages),
-                text=f"VOC 분석 중 · {index:,}/{len(messages):,}",
+                index / total,
+                text=f"VOC 분석 중 · {index:,}/{total:,}",
             )
 
+        result_df = analyze_batch(
+            raw_df,
+            message_column,
+            on_progress=update_progress,
+        )
         progress.empty()
-
-        base_df = raw_df.drop(
-            columns=[column for column in ANALYSIS_COLUMNS if column in raw_df.columns],
-            errors="ignore",
-        ).reset_index(drop=True)
-        prediction_df = pd.DataFrame(predictions)
-        result_df = pd.concat([base_df, prediction_df], axis=1)
         st.session_state["voc_results"] = result_df
 
-        failure_count = int(result_df["analysis_error"].notna().sum())
-        if failure_count:
+        summary = summarize_results(result_df)
+        if summary.failed_rows:
             st.warning(
-                f"{len(result_df):,}건 중 {failure_count:,}건은 분석에 실패했습니다. "
+                f"{summary.input_rows:,}건 중 {summary.failed_rows:,}건은 분석에 실패했습니다. "
                 "`analysis_error` 컬럼을 확인하세요."
             )
         else:
-            st.success(f"{len(result_df):,}건의 VOC 분석을 완료했습니다.")
+            st.success(f"{summary.successful_rows:,}건의 VOC 분석을 완료했습니다.")
 
 results = st.session_state.get("voc_results")
 if not isinstance(results, pd.DataFrame) or results.empty:
@@ -120,6 +92,14 @@ if not isinstance(results, pd.DataFrame) or results.empty:
 
 st.divider()
 st.subheader("Analysis Result")
+
+summary = summarize_results(results)
+metric_columns = st.columns(5)
+metric_columns[0].metric("Input rows", f"{summary.input_rows:,}")
+metric_columns[1].metric("Analyzed", f"{summary.successful_rows:,}")
+metric_columns[2].metric("Failed", f"{summary.failed_rows:,}")
+metric_columns[3].metric("Human review", f"{summary.human_review_rows:,}")
+metric_columns[4].metric("High / critical", f"{summary.high_priority_rows:,}")
 
 filter_col1, filter_col2, filter_col3 = st.columns(3)
 with filter_col1:
@@ -154,7 +134,7 @@ if review_filter != "All":
     filtered = filtered[review_bool if review_filter == "Yes" else ~review_bool]
 
 st.caption(f"Showing {len(filtered):,} of {len(results):,} rows")
-st.dataframe(filtered, use_container_width=True, hide_index=True)
+st.dataframe(filtered, width="stretch", hide_index=True)
 
 csv_bytes = filtered.to_csv(index=False).encode("utf-8-sig")
 st.download_button(
@@ -162,5 +142,5 @@ st.download_button(
     data=csv_bytes,
     file_name="voc_analysis_result.csv",
     mime="text/csv",
-    use_container_width=True,
+    width="stretch",
 )
