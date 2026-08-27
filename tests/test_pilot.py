@@ -38,6 +38,13 @@ def test_redact_pii_masks_common_identifiers():
     assert "[NUMBER]" in redacted
 
 
+def test_redact_pii_masks_email_adjacent_to_korean_text():
+    redacted = redact_pii("이메일은 test@example.com입니다")
+
+    assert "test@example.com" not in redacted
+    assert "[EMAIL]" in redacted
+
+
 def test_feedback_record_keeps_provenance_and_redacts():
     record = build_feedback_record(
         session_id="session-1",

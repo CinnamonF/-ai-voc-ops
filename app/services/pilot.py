@@ -22,7 +22,10 @@ DEFAULT_SINGLE_ANALYSIS_LIMIT = 20
 DEFAULT_FEEDBACK_TABLE = "pilot_feedback"
 MAX_CONFIGURED_BATCH_ROWS = 500
 
-_EMAIL_RE = re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.IGNORECASE)
+_EMAIL_RE = re.compile(
+    r"(?<![A-Z0-9._%+-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?![A-Z0-9._%+-])",
+    re.IGNORECASE,
+)
 _PHONE_RE = re.compile(
     r"(?<!\d)(?:\+?82[-.\s]?)?(?:0?1[016789])(?:[-.\s]?\d){7,8}(?!\d)"
 )
