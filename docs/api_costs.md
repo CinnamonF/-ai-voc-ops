@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-08-28
 
-The v0.1 classifier defaults to `gpt-5.6-luna`, a cost-sensitive GPT-5.6 model that supports the Responses API and Structured Outputs.
+The v0.1 classifier defaults to `gpt-5.6-luna`, a cost-sensitive GPT-5.6 model that supports the Responses API and Structured Outputs. The table below is a dated planning snapshot from the official model pages, not a permanent value in application code.
 
 ## Published token pricing
 
@@ -13,6 +13,12 @@ The v0.1 classifier defaults to `gpt-5.6-luna`, a cost-sensitive GPT-5.6 model t
 | GPT-5.6 Sol | $4.00 | $0.40 | $20.00 |
 
 Pricing can change. Re-check the official OpenAI pricing page before publishing portfolio cost claims.
+
+Official sources reviewed on the date above:
+
+- <https://developers.openai.com/api/docs/models/gpt-5.6-luna>
+- <https://developers.openai.com/api/docs/models/gpt-5.6-terra>
+- <https://developers.openai.com/api/docs/models/gpt-5.6-sol>
 
 ## Conservative v0.1 estimate
 
@@ -32,13 +38,33 @@ With GPT-5.6 Luna and no prompt-cache discount:
 | 5,000 | $2.72 |
 | 10,000 | $5.44 |
 
-This is an estimate, not a measured project result. Actual cost must be calculated from API usage tokens after live runs. Prompt caching may reduce repeated static-input cost.
+This is an estimate, not a measured project result. Prompt caching may reduce repeated static-input cost.
+
+## Runtime usage fields
+
+Each successful analyzed row records:
+
+- `input_tokens`
+- `cached_input_tokens`
+- `output_tokens`
+- `model`
+- `estimated_cost_usd`
+
+The first four values come from the actual API response. `estimated_cost_usd` remains empty unless the operator configures all three dated rates:
+
+```text
+OPENAI_INPUT_COST_PER_1M=...
+OPENAI_CACHED_INPUT_COST_PER_1M=...
+OPENAI_OUTPUT_COST_PER_1M=...
+```
+
+This distinction prevents a token-price estimate from being mislabeled as an API-reported charge.
 
 ## Cost measurement plan
 
 Before using a cost number in the portfolio:
 
 1. Run the labeled evaluation set.
-2. Record actual `input_tokens`, `cached_tokens`, and `output_tokens` from API responses.
+2. Export actual `input_tokens`, `cached_input_tokens`, and `output_tokens` from API responses.
 3. Calculate cost from the exact model pricing at that date.
 4. Publish measured cost per 1,000 VOCs alongside classification quality metrics.
