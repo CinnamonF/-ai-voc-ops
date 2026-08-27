@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-from utils.taxonomy import HUMAN_REVIEW_RULES, PRIORITY_RULES, TAXONOMY
+from app.services.taxonomy import HUMAN_REVIEW_RULES, PRIORITY_RULES, TAXONOMY_DETAILS
 
 st.title("VOC Taxonomy")
 st.caption("The classification system used by AI VOC Ops v0.1.")
@@ -10,7 +10,7 @@ st.info(
     "Taxonomy는 모델이 임의의 라벨을 만드는 것을 막고, 동일한 운영 기준으로 VOC를 집계·평가하기 위한 기준입니다."
 )
 
-for category, items in TAXONOMY.items():
+for category, items in TAXONOMY_DETAILS.items():
     with st.expander(f"{category} · {len(items)} subcategories"):
         st.dataframe(pd.DataFrame(items), use_container_width=True, hide_index=True)
 
