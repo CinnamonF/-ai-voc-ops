@@ -1,3 +1,4 @@
+import evals.export_pilot_feedback as export_pilot_feedback
 from evals.export_pilot_feedback import to_review_rows
 
 
@@ -24,3 +25,15 @@ def test_pilot_feedback_exports_as_provisional_review_queue():
     assert rows[0]["label_status"] == "provisional"
     assert rows[0]["source_type"] == "pilot_feedback"
     assert rows[0]["human_review_gold"] == "true"
+
+
+def test_export_cli_reports_missing_configuration_without_traceback(monkeypatch, capsys):
+    monkeypatch.delenv("SUPABASE_URL", raising=False)
+    monkeypatch.delenv("SUPABASE_SERVICE_ROLE_KEY", raising=False)
+
+    exit_code = export_pilot_feedback.main()
+
+    captured = capsys.readouterr()
+    assert exit_code == 2
+    assert "SUPABASE_URL" in captured.err
+    assert "Traceback" not in captured.err

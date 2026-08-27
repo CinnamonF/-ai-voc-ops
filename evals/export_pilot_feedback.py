@@ -6,6 +6,7 @@ import csv
 import json
 import os
 import re
+import sys
 from pathlib import Path
 from urllib import error, parse, request
 
@@ -76,8 +77,12 @@ def to_review_rows(feedback_rows: list[dict]) -> list[dict]:
     return rows
 
 
-def main() -> None:
-    feedback = fetch_feedback()
+def main() -> int:
+    try:
+        feedback = fetch_feedback()
+    except RuntimeError as exc:
+        print(f"피드백 export를 실행할 수 없습니다: {exc}", file=sys.stderr)
+        return 2
     review_rows = to_review_rows(feedback)
 
     output = Path("evals/results/pilot_feedback_review_queue.csv")
@@ -107,7 +112,8 @@ def main() -> None:
 
     print(f"Exported {len(review_rows)} provisional feedback rows -> {output}")
     print("Review them manually before changing label_status to reviewed.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
