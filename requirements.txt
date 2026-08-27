@@ -1,5 +1,5 @@
-pandas
-streamlit
-openai
-python-dotenv
-pytest
+pandas>=2.0
+streamlit>=1.36
+openai>=1.0
+python-dotenv>=1.0
+pytest>=8.0
