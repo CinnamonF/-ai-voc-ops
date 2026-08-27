@@ -1,0 +1,2 @@
+text,gold_category,gold_subcategory,gold_priority,requires_human_review
+"배송 완료인데 못 받았습니다.",배송,배송완료 미수령,high,true

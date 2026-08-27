@@ -1,0 +1,1 @@
+"""VOC analysis page placeholder."""
