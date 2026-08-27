@@ -1,0 +1,201 @@
+ticket_id,customer_message,category_gold,subcategory_gold,priority_gold,sentiment_gold,human_review_gold,label_note,dataset_subset,source_type,label_status,label_version
+GOLD-0001,아직 발송이 안 됐어요,배송,출고 지연,normal,negative,false,배송 > 출고 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0002,아직 발송이 안 됐어요 확인 부탁드립니다,배송,출고 지연,normal,negative,false,배송 > 출고 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0003,문의드립니다 아직 발송이 안 됐어요,배송,출고 지연,normal,negative,false,배송 > 출고 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0004,방금 확인했는데 아직 발송이 안 됐어요,배송,출고 지연,normal,negative,false,배송 > 출고 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0005,아직 발송이 안 됐어요 어떻게 처리하면 될까요,배송,출고 지연,normal,negative,false,배송 > 출고 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0006,택배가 며칠째 움직이지 않아요,배송,배송 지연,normal,negative,false,배송 > 배송 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0007,택배가 며칠째 움직이지 않아요 확인 부탁드립니다,배송,배송 지연,normal,negative,false,배송 > 배송 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0008,문의드립니다 택배가 며칠째 움직이지 않아요,배송,배송 지연,normal,negative,false,배송 > 배송 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0009,방금 확인했는데 택배가 며칠째 움직이지 않아요,배송,배송 지연,normal,negative,false,배송 > 배송 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0010,택배가 며칠째 움직이지 않아요 어떻게 처리하면 될까요,배송,배송 지연,normal,negative,false,배송 > 배송 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0011,배송 완료라고 나오는데 상품을 받지 못했어요,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0012,배송 완료라고 나오는데 상품을 받지 못했어요 확인 부탁드립니다,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0013,문의드립니다 배송 완료라고 나오는데 상품을 받지 못했어요,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0014,방금 확인했는데 배송 완료라고 나오는데 상품을 받지 못했어요,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0015,배송 완료라고 나오는데 상품을 받지 못했어요 어떻게 처리하면 될까요,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0016,송장 조회가 안 돼요,배송,배송 조회,low,neutral,false,배송 > 배송 조회 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0017,송장 조회가 안 돼요 확인 부탁드립니다,배송,배송 조회,low,neutral,false,배송 > 배송 조회 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0018,문의드립니다 송장 조회가 안 돼요,배송,배송 조회,low,neutral,false,배송 > 배송 조회 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0019,방금 확인했는데 송장 조회가 안 돼요,배송,배송 조회,low,neutral,false,배송 > 배송 조회 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0020,송장 조회가 안 돼요 어떻게 처리하면 될까요,배송,배송 조회,low,neutral,false,배송 > 배송 조회 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0021,배송지를 바꾸고 싶어요,배송,배송지 변경,normal,neutral,false,배송 > 배송지 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0022,배송지를 바꾸고 싶어요 확인 부탁드립니다,배송,배송지 변경,normal,neutral,false,배송 > 배송지 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0023,문의드립니다 배송지를 바꾸고 싶어요,배송,배송지 변경,normal,neutral,false,배송 > 배송지 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0024,방금 확인했는데 배송지를 바꾸고 싶어요,배송,배송지 변경,normal,neutral,false,배송 > 배송지 변경 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0025,배송지를 바꾸고 싶어요 어떻게 처리하면 될까요,배송,배송지 변경,normal,neutral,false,배송 > 배송지 변경 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0026,택배가 배송 중에 분실된 것 같아요,배송,배송 중 분실,high,negative,true,배송 > 배송 중 분실 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0027,택배가 배송 중에 분실된 것 같아요 확인 부탁드립니다,배송,배송 중 분실,high,negative,true,배송 > 배송 중 분실 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0028,문의드립니다 택배가 배송 중에 분실된 것 같아요,배송,배송 중 분실,high,negative,true,배송 > 배송 중 분실 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0029,방금 확인했는데 택배가 배송 중에 분실된 것 같아요,배송,배송 중 분실,high,negative,true,배송 > 배송 중 분실 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0030,택배가 배송 중에 분실된 것 같아요 어떻게 처리하면 될까요,배송,배송 중 분실,high,negative,true,배송 > 배송 중 분실 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0031,카드 결제가 계속 실패해요,주문/결제,결제 실패,normal,negative,false,주문/결제 > 결제 실패 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0032,카드 결제가 계속 실패해요 확인 부탁드립니다,주문/결제,결제 실패,normal,negative,false,주문/결제 > 결제 실패 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0033,문의드립니다 카드 결제가 계속 실패해요,주문/결제,결제 실패,normal,negative,false,주문/결제 > 결제 실패 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0034,방금 확인했는데 카드 결제가 계속 실패해요,주문/결제,결제 실패,normal,negative,false,주문/결제 > 결제 실패 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0035,카드 결제가 계속 실패해요 어떻게 처리하면 될까요,주문/결제,결제 실패,normal,negative,false,주문/결제 > 결제 실패 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0036,같은 주문이 두 번 결제됐어요,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0037,같은 주문이 두 번 결제됐어요 확인 부탁드립니다,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0038,문의드립니다 같은 주문이 두 번 결제됐어요,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0039,방금 확인했는데 같은 주문이 두 번 결제됐어요,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0040,같은 주문이 두 번 결제됐어요 어떻게 처리하면 될까요,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0041,주문한 옵션을 바꾸고 싶어요,주문/결제,주문 변경,normal,neutral,false,주문/결제 > 주문 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0042,주문한 옵션을 바꾸고 싶어요 확인 부탁드립니다,주문/결제,주문 변경,normal,neutral,false,주문/결제 > 주문 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0043,문의드립니다 주문한 옵션을 바꾸고 싶어요,주문/결제,주문 변경,normal,neutral,false,주문/결제 > 주문 변경 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0044,방금 확인했는데 주문한 옵션을 바꾸고 싶어요,주문/결제,주문 변경,normal,neutral,false,주문/결제 > 주문 변경 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0045,주문한 옵션을 바꾸고 싶어요 어떻게 처리하면 될까요,주문/결제,주문 변경,normal,neutral,false,주문/결제 > 주문 변경 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0046,주문이 정상 접수됐는지 확인하고 싶어요,주문/결제,주문 확인,low,neutral,false,주문/결제 > 주문 확인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0047,주문이 정상 접수됐는지 확인하고 싶어요 확인 부탁드립니다,주문/결제,주문 확인,low,neutral,false,주문/결제 > 주문 확인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0048,문의드립니다 주문이 정상 접수됐는지 확인하고 싶어요,주문/결제,주문 확인,low,neutral,false,주문/결제 > 주문 확인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0049,방금 확인했는데 주문이 정상 접수됐는지 확인하고 싶어요,주문/결제,주문 확인,low,neutral,false,주문/결제 > 주문 확인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0050,주문이 정상 접수됐는지 확인하고 싶어요 어떻게 처리하면 될까요,주문/결제,주문 확인,low,neutral,false,주문/결제 > 주문 확인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0051,쿠폰이 결제할 때 적용되지 않아요,주문/결제,쿠폰/프로모션,normal,neutral,false,주문/결제 > 쿠폰/프로모션 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0052,쿠폰이 결제할 때 적용되지 않아요 확인 부탁드립니다,주문/결제,쿠폰/프로모션,normal,neutral,false,주문/결제 > 쿠폰/프로모션 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0053,문의드립니다 쿠폰이 결제할 때 적용되지 않아요,주문/결제,쿠폰/프로모션,normal,neutral,false,주문/결제 > 쿠폰/프로모션 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0054,방금 확인했는데 쿠폰이 결제할 때 적용되지 않아요,주문/결제,쿠폰/프로모션,normal,neutral,false,주문/결제 > 쿠폰/프로모션 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0055,쿠폰이 결제할 때 적용되지 않아요 어떻게 처리하면 될까요,주문/결제,쿠폰/프로모션,normal,neutral,false,주문/결제 > 쿠폰/프로모션 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0056,표시된 할인 가격과 결제 가격이 달라요,주문/결제,가격/할인,low,neutral,false,주문/결제 > 가격/할인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0057,표시된 할인 가격과 결제 가격이 달라요 확인 부탁드립니다,주문/결제,가격/할인,low,neutral,false,주문/결제 > 가격/할인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0058,문의드립니다 표시된 할인 가격과 결제 가격이 달라요,주문/결제,가격/할인,low,neutral,false,주문/결제 > 가격/할인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0059,방금 확인했는데 표시된 할인 가격과 결제 가격이 달라요,주문/결제,가격/할인,low,neutral,false,주문/결제 > 가격/할인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0060,표시된 할인 가격과 결제 가격이 달라요 어떻게 처리하면 될까요,주문/결제,가격/할인,low,neutral,false,주문/결제 > 가격/할인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0061,주문을 취소하고 싶어요,취소/환불,주문 취소,normal,neutral,false,취소/환불 > 주문 취소 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0062,주문을 취소하고 싶어요 확인 부탁드립니다,취소/환불,주문 취소,normal,neutral,false,취소/환불 > 주문 취소 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0063,문의드립니다 주문을 취소하고 싶어요,취소/환불,주문 취소,normal,neutral,false,취소/환불 > 주문 취소 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0064,방금 확인했는데 주문을 취소하고 싶어요,취소/환불,주문 취소,normal,neutral,false,취소/환불 > 주문 취소 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0065,주문을 취소하고 싶어요 어떻게 처리하면 될까요,취소/환불,주문 취소,normal,neutral,false,취소/환불 > 주문 취소 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0066,반품 완료 후에도 환불이 들어오지 않았어요,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0067,반품 완료 후에도 환불이 들어오지 않았어요 확인 부탁드립니다,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0068,문의드립니다 반품 완료 후에도 환불이 들어오지 않았어요,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0069,방금 확인했는데 반품 완료 후에도 환불이 들어오지 않았어요,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0070,반품 완료 후에도 환불이 들어오지 않았어요 어떻게 처리하면 될까요,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0071,결제 금액 중 일부만 환불됐어요,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0072,결제 금액 중 일부만 환불됐어요 확인 부탁드립니다,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0073,문의드립니다 결제 금액 중 일부만 환불됐어요,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0074,방금 확인했는데 결제 금액 중 일부만 환불됐어요,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0075,결제 금액 중 일부만 환불됐어요 어떻게 처리하면 될까요,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0076,환불 예정 금액이 생각한 금액과 달라요,취소/환불,환불 금액,high,negative,true,취소/환불 > 환불 금액 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0077,환불 예정 금액이 생각한 금액과 달라요 확인 부탁드립니다,취소/환불,환불 금액,high,negative,true,취소/환불 > 환불 금액 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0078,문의드립니다 환불 예정 금액이 생각한 금액과 달라요,취소/환불,환불 금액,high,negative,true,취소/환불 > 환불 금액 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0079,방금 확인했는데 환불 예정 금액이 생각한 금액과 달라요,취소/환불,환불 금액,high,negative,true,취소/환불 > 환불 금액 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0080,환불 예정 금액이 생각한 금액과 달라요 어떻게 처리하면 될까요,취소/환불,환불 금액,high,negative,true,취소/환불 > 환불 금액 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0081,주문 취소 버튼이 비활성화되어 있어요,취소/환불,취소 불가,normal,negative,false,취소/환불 > 취소 불가 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0082,주문 취소 버튼이 비활성화되어 있어요 확인 부탁드립니다,취소/환불,취소 불가,normal,negative,false,취소/환불 > 취소 불가 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0083,문의드립니다 주문 취소 버튼이 비활성화되어 있어요,취소/환불,취소 불가,normal,negative,false,취소/환불 > 취소 불가 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0084,방금 확인했는데 주문 취소 버튼이 비활성화되어 있어요,취소/환불,취소 불가,normal,negative,false,취소/환불 > 취소 불가 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0085,주문 취소 버튼이 비활성화되어 있어요 어떻게 처리하면 될까요,취소/환불,취소 불가,normal,negative,false,취소/환불 > 취소 불가 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0086,마음이 바뀌어서 반품하고 싶어요,교환/반품,단순 변심 반품,normal,neutral,false,교환/반품 > 단순 변심 반품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0087,마음이 바뀌어서 반품하고 싶어요 확인 부탁드립니다,교환/반품,단순 변심 반품,normal,neutral,false,교환/반품 > 단순 변심 반품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0088,문의드립니다 마음이 바뀌어서 반품하고 싶어요,교환/반품,단순 변심 반품,normal,neutral,false,교환/반품 > 단순 변심 반품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0089,방금 확인했는데 마음이 바뀌어서 반품하고 싶어요,교환/반품,단순 변심 반품,normal,neutral,false,교환/반품 > 단순 변심 반품 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0090,마음이 바뀌어서 반품하고 싶어요 어떻게 처리하면 될까요,교환/반품,단순 변심 반품,normal,neutral,false,교환/반품 > 단순 변심 반품 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0091,제품이 정상적으로 작동하지 않아요,교환/반품,상품 불량,normal,negative,false,교환/반품 > 상품 불량 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0092,제품이 정상적으로 작동하지 않아요 확인 부탁드립니다,교환/반품,상품 불량,normal,negative,false,교환/반품 > 상품 불량 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0093,문의드립니다 제품이 정상적으로 작동하지 않아요,교환/반품,상품 불량,normal,negative,false,교환/반품 > 상품 불량 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0094,방금 확인했는데 제품이 정상적으로 작동하지 않아요,교환/반품,상품 불량,normal,negative,false,교환/반품 > 상품 불량 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0095,제품이 정상적으로 작동하지 않아요 어떻게 처리하면 될까요,교환/반품,상품 불량,normal,negative,false,교환/반품 > 상품 불량 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0096,제품이 깨져서 내용물이 샜어요,교환/반품,파손,high,negative,true,교환/반품 > 파손 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0097,제품이 깨져서 내용물이 샜어요 확인 부탁드립니다,교환/반품,파손,high,negative,true,교환/반품 > 파손 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0098,문의드립니다 제품이 깨져서 내용물이 샜어요,교환/반품,파손,high,negative,true,교환/반품 > 파손 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0099,방금 확인했는데 제품이 깨져서 내용물이 샜어요,교환/반품,파손,high,negative,true,교환/반품 > 파손 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0100,제품이 깨져서 내용물이 샜어요 어떻게 처리하면 될까요,교환/반품,파손,high,negative,true,교환/반품 > 파손 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0101,주문한 색상과 다른 색상이 왔어요,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0102,주문한 색상과 다른 색상이 왔어요 확인 부탁드립니다,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0103,문의드립니다 주문한 색상과 다른 색상이 왔어요,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0104,방금 확인했는데 주문한 색상과 다른 색상이 왔어요,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0105,주문한 색상과 다른 색상이 왔어요 어떻게 처리하면 될까요,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0106,교환 신청 방법을 알고 싶어요,교환/반품,교환 절차,low,neutral,false,교환/반품 > 교환 절차 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0107,교환 신청 방법을 알고 싶어요 확인 부탁드립니다,교환/반품,교환 절차,low,neutral,false,교환/반품 > 교환 절차 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0108,문의드립니다 교환 신청 방법을 알고 싶어요,교환/반품,교환 절차,low,neutral,false,교환/반품 > 교환 절차 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0109,방금 확인했는데 교환 신청 방법을 알고 싶어요,교환/반품,교환 절차,low,neutral,false,교환/반품 > 교환 절차 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0110,교환 신청 방법을 알고 싶어요 어떻게 처리하면 될까요,교환/반품,교환 절차,low,neutral,false,교환/반품 > 교환 절차 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0111,반품 배송비가 왜 발생하는지 궁금해요,교환/반품,반품비,normal,neutral,false,교환/반품 > 반품비 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0112,반품 배송비가 왜 발생하는지 궁금해요 확인 부탁드립니다,교환/반품,반품비,normal,neutral,false,교환/반품 > 반품비 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0113,문의드립니다 반품 배송비가 왜 발생하는지 궁금해요,교환/반품,반품비,normal,neutral,false,교환/반품 > 반품비 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0114,방금 확인했는데 반품 배송비가 왜 발생하는지 궁금해요,교환/반품,반품비,normal,neutral,false,교환/반품 > 반품비 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0115,반품 배송비가 왜 발생하는지 궁금해요 어떻게 처리하면 될까요,교환/반품,반품비,normal,neutral,false,교환/반품 > 반품비 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0116,이 제품을 어떻게 사용하면 되나요,상품정보,사용법,low,neutral,false,상품정보 > 사용법 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0117,이 제품을 어떻게 사용하면 되나요 확인 부탁드립니다,상품정보,사용법,low,neutral,false,상품정보 > 사용법 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0118,문의드립니다 이 제품을 어떻게 사용하면 되나요,상품정보,사용법,low,neutral,false,상품정보 > 사용법 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0119,방금 확인했는데 이 제품을 어떻게 사용하면 되나요,상품정보,사용법,low,neutral,false,상품정보 > 사용법 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0120,이 제품을 어떻게 사용하면 되나요 어떻게 처리하면 될까요,상품정보,사용법,low,neutral,false,상품정보 > 사용법 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0121,어떤 성분이 들어있는지 궁금해요,상품정보,성분/소재,low,neutral,false,상품정보 > 성분/소재 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0122,어떤 성분이 들어있는지 궁금해요 확인 부탁드립니다,상품정보,성분/소재,low,neutral,false,상품정보 > 성분/소재 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0123,문의드립니다 어떤 성분이 들어있는지 궁금해요,상품정보,성분/소재,low,neutral,false,상품정보 > 성분/소재 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0124,방금 확인했는데 어떤 성분이 들어있는지 궁금해요,상품정보,성분/소재,low,neutral,false,상품정보 > 성분/소재 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0125,어떤 성분이 들어있는지 궁금해요 어떻게 처리하면 될까요,상품정보,성분/소재,low,neutral,false,상품정보 > 성분/소재 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0126,어떤 사이즈를 선택해야 할까요,상품정보,옵션/사이즈,low,neutral,false,상품정보 > 옵션/사이즈 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0127,어떤 사이즈를 선택해야 할까요 확인 부탁드립니다,상품정보,옵션/사이즈,low,neutral,false,상품정보 > 옵션/사이즈 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0128,문의드립니다 어떤 사이즈를 선택해야 할까요,상품정보,옵션/사이즈,low,neutral,false,상품정보 > 옵션/사이즈 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0129,방금 확인했는데 어떤 사이즈를 선택해야 할까요,상품정보,옵션/사이즈,low,neutral,false,상품정보 > 옵션/사이즈 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0130,어떤 사이즈를 선택해야 할까요 어떻게 처리하면 될까요,상품정보,옵션/사이즈,low,neutral,false,상품정보 > 옵션/사이즈 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0131,품절 상품 재입고 일정이 궁금해요,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0132,품절 상품 재입고 일정이 궁금해요 확인 부탁드립니다,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0133,문의드립니다 품절 상품 재입고 일정이 궁금해요,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0134,방금 확인했는데 품절 상품 재입고 일정이 궁금해요,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0135,품절 상품 재입고 일정이 궁금해요 어떻게 처리하면 될까요,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0136,다른 제품과 같이 사용해도 되나요,상품정보,호환/적합성,normal,neutral,false,상품정보 > 호환/적합성 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0137,다른 제품과 같이 사용해도 되나요 확인 부탁드립니다,상품정보,호환/적합성,normal,neutral,false,상품정보 > 호환/적합성 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0138,문의드립니다 다른 제품과 같이 사용해도 되나요,상품정보,호환/적합성,normal,neutral,false,상품정보 > 호환/적합성 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0139,방금 확인했는데 다른 제품과 같이 사용해도 되나요,상품정보,호환/적합성,normal,neutral,false,상품정보 > 호환/적합성 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0140,다른 제품과 같이 사용해도 되나요 어떻게 처리하면 될까요,상품정보,호환/적합성,normal,neutral,false,상품정보 > 호환/적합성 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0141,유통기한과 보관 방법을 알고 싶어요,상품정보,유통기한/보관,low,neutral,false,상품정보 > 유통기한/보관 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0142,유통기한과 보관 방법을 알고 싶어요 확인 부탁드립니다,상품정보,유통기한/보관,low,neutral,false,상품정보 > 유통기한/보관 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0143,문의드립니다 유통기한과 보관 방법을 알고 싶어요,상품정보,유통기한/보관,low,neutral,false,상품정보 > 유통기한/보관 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0144,방금 확인했는데 유통기한과 보관 방법을 알고 싶어요,상품정보,유통기한/보관,low,neutral,false,상품정보 > 유통기한/보관 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0145,유통기한과 보관 방법을 알고 싶어요 어떻게 처리하면 될까요,상품정보,유통기한/보관,low,neutral,false,상품정보 > 유통기한/보관 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0146,비밀번호가 맞는데 로그인이 안 돼요,계정/서비스,로그인,normal,negative,false,계정/서비스 > 로그인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0147,비밀번호가 맞는데 로그인이 안 돼요 확인 부탁드립니다,계정/서비스,로그인,normal,negative,false,계정/서비스 > 로그인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0148,문의드립니다 비밀번호가 맞는데 로그인이 안 돼요,계정/서비스,로그인,normal,negative,false,계정/서비스 > 로그인 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0149,방금 확인했는데 비밀번호가 맞는데 로그인이 안 돼요,계정/서비스,로그인,normal,negative,false,계정/서비스 > 로그인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0150,비밀번호가 맞는데 로그인이 안 돼요 어떻게 처리하면 될까요,계정/서비스,로그인,normal,negative,false,계정/서비스 > 로그인 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0151,회원정보의 전화번호를 변경하고 싶어요,계정/서비스,회원정보,normal,neutral,false,계정/서비스 > 회원정보 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0152,회원정보의 전화번호를 변경하고 싶어요 확인 부탁드립니다,계정/서비스,회원정보,normal,neutral,false,계정/서비스 > 회원정보 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0153,문의드립니다 회원정보의 전화번호를 변경하고 싶어요,계정/서비스,회원정보,normal,neutral,false,계정/서비스 > 회원정보 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0154,방금 확인했는데 회원정보의 전화번호를 변경하고 싶어요,계정/서비스,회원정보,normal,neutral,false,계정/서비스 > 회원정보 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0155,회원정보의 전화번호를 변경하고 싶어요 어떻게 처리하면 될까요,계정/서비스,회원정보,normal,neutral,false,계정/서비스 > 회원정보 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0156,적립금이 사라졌어요,계정/서비스,포인트/적립금,normal,negative,false,계정/서비스 > 포인트/적립금 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0157,적립금이 사라졌어요 확인 부탁드립니다,계정/서비스,포인트/적립금,normal,negative,false,계정/서비스 > 포인트/적립금 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0158,문의드립니다 적립금이 사라졌어요,계정/서비스,포인트/적립금,normal,negative,false,계정/서비스 > 포인트/적립금 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0159,방금 확인했는데 적립금이 사라졌어요,계정/서비스,포인트/적립금,normal,negative,false,계정/서비스 > 포인트/적립금 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0160,적립금이 사라졌어요 어떻게 처리하면 될까요,계정/서비스,포인트/적립금,normal,negative,false,계정/서비스 > 포인트/적립금 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0161,주문 알림 메시지가 오지 않아요,계정/서비스,알림/메시지,low,neutral,false,계정/서비스 > 알림/메시지 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0162,주문 알림 메시지가 오지 않아요 확인 부탁드립니다,계정/서비스,알림/메시지,low,neutral,false,계정/서비스 > 알림/메시지 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0163,문의드립니다 주문 알림 메시지가 오지 않아요,계정/서비스,알림/메시지,low,neutral,false,계정/서비스 > 알림/메시지 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0164,방금 확인했는데 주문 알림 메시지가 오지 않아요,계정/서비스,알림/메시지,low,neutral,false,계정/서비스 > 알림/메시지 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0165,주문 알림 메시지가 오지 않아요 어떻게 처리하면 될까요,계정/서비스,알림/메시지,low,neutral,false,계정/서비스 > 알림/메시지 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0166,같은 문제로 여러 번 문의했는데 해결되지 않았어요,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0167,같은 문제로 여러 번 문의했는데 해결되지 않았어요 확인 부탁드립니다,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0168,문의드립니다 같은 문제로 여러 번 문의했는데 해결되지 않았어요,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0169,방금 확인했는데 같은 문제로 여러 번 문의했는데 해결되지 않았어요,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0170,같은 문제로 여러 번 문의했는데 해결되지 않았어요 어떻게 처리하면 될까요,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0171,이 반품 정책이 이해되지 않아요,클레임/기타,정책 이의,normal,negative,false,클레임/기타 > 정책 이의 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0172,이 반품 정책이 이해되지 않아요 확인 부탁드립니다,클레임/기타,정책 이의,normal,negative,false,클레임/기타 > 정책 이의 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0173,문의드립니다 이 반품 정책이 이해되지 않아요,클레임/기타,정책 이의,normal,negative,false,클레임/기타 > 정책 이의 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0174,방금 확인했는데 이 반품 정책이 이해되지 않아요,클레임/기타,정책 이의,normal,negative,false,클레임/기타 > 정책 이의 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0175,이 반품 정책이 이해되지 않아요 어떻게 처리하면 될까요,클레임/기타,정책 이의,normal,negative,false,클레임/기타 > 정책 이의 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0176,상담 응대가 불친절했어요,클레임/기타,상담 불만,normal,negative,false,클레임/기타 > 상담 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0177,상담 응대가 불친절했어요 확인 부탁드립니다,클레임/기타,상담 불만,normal,negative,false,클레임/기타 > 상담 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0178,문의드립니다 상담 응대가 불친절했어요,클레임/기타,상담 불만,normal,negative,false,클레임/기타 > 상담 불만 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0179,방금 확인했는데 상담 응대가 불친절했어요,클레임/기타,상담 불만,normal,negative,false,클레임/기타 > 상담 불만 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0180,상담 응대가 불친절했어요 어떻게 처리하면 될까요,클레임/기타,상담 불만,normal,negative,false,클레임/기타 > 상담 불만 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0181,제 개인정보가 다른 고객에게 노출된 것 같아요,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0182,제 개인정보가 다른 고객에게 노출된 것 같아요 확인 부탁드립니다,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0183,문의드립니다 제 개인정보가 다른 고객에게 노출된 것 같아요,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0184,방금 확인했는데 제 개인정보가 다른 고객에게 노출된 것 같아요,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0185,제 개인정보가 다른 고객에게 노출된 것 같아요 어떻게 처리하면 될까요,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0186,제휴 문의는 어디로 하면 되나요,클레임/기타,기타,normal,neutral,true,클레임/기타 > 기타 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0187,제휴 문의는 어디로 하면 되나요 확인 부탁드립니다,클레임/기타,기타,normal,neutral,true,클레임/기타 > 기타 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0188,문의드립니다 제휴 문의는 어디로 하면 되나요,클레임/기타,기타,normal,neutral,true,클레임/기타 > 기타 경계 규칙에 맞춘 합성 예시,coverage,synthetic,provisional,v0.2-seed
+GOLD-0189,방금 확인했는데 제휴 문의는 어디로 하면 되나요,클레임/기타,기타,normal,neutral,true,클레임/기타 > 기타 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0190,제휴 문의는 어디로 하면 되나요 어떻게 처리하면 될까요,클레임/기타,기타,normal,neutral,true,클레임/기타 > 기타 경계 규칙에 맞춘 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0191,배송완료 알림은 왔는데 문 앞에 택배가 없어요,배송,배송완료 미수령,high,negative,true,배송 > 배송완료 미수령 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0192,배송 예정일이 지났는데 아직 물류센터에 있어요,배송,배송 지연,normal,negative,false,배송 > 배송 지연 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0193,주문은 하나인데 카드 승인 문자가 두 번 왔습니다,주문/결제,중복 결제,high,negative,true,주문/결제 > 중복 결제 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0194,취소 완료 후 일주일째 카드 취소가 안 됐어요,취소/환불,환불 지연,high,negative,true,취소/환불 > 환불 지연 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0195,전체 반품했는데 한 상품 금액만 환불됐습니다,취소/환불,부분 환불,high,negative,true,취소/환불 > 부분 환불 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0196,택배 상자를 열어보니 용기가 깨져 있었습니다,교환/반품,파손,high,negative,true,교환/반품 > 파손 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0197,라지 사이즈를 주문했는데 미디엄이 도착했어요,교환/반품,오배송 상품,high,negative,true,교환/반품 > 오배송 상품 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0198,품절된 블랙 옵션은 언제 다시 구매할 수 있나요,상품정보,재고/재입고,low,neutral,false,상품정보 > 재고/재입고 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0199,세 번째 문의인데 아직 같은 문제가 그대로입니다,클레임/기타,반복 불만,high,negative,true,클레임/기타 > 반복 불만 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed
+GOLD-0200,제 계정에서 모르는 사람의 주문 정보가 보입니다,클레임/기타,개인정보/보안,critical,negative,true,클레임/기타 > 개인정보/보안 운영 혼합 합성 예시,operational_mix,synthetic,provisional,v0.2-seed

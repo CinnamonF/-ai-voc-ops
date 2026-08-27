@@ -21,6 +21,28 @@ Transform raw customer support conversations into structured VOC insights that s
 4. Flag cases requiring human review
 5. Export classified results
 
+## v0.2 Evaluation & Model Improvement
+
+v0.2 adds a repeatable evaluation loop instead of adding more AI features.
+
+- 200-row synthetic/provisional evaluation seed covering all 38 subcategories
+- Major category Accuracy / Macro Precision / Recall / F1
+- Subcategory Accuracy / Macro Precision / Recall / F1
+- High-risk Precision / Recall
+- Human Review Precision / Recall / F1
+- Major and subcategory confusion matrices
+- Per-subcategory metrics
+- Editable error-analysis workflow
+- Model / prompt / taxonomy / dataset provenance
+- Aggregated measured token usage
+- Baseline-vs-candidate run comparison
+
+The 200-row seed is **not a publishable gold benchmark yet**. Every row starts with
+`label_status=provisional`. Portfolio metrics are calculated by default only from
+rows that a person has reviewed and changed to `label_status=reviewed`.
+
+See `docs/v0.2_evaluation.md`.
+
 ## Current UI
 
 The Streamlit prototype includes:
@@ -28,7 +50,7 @@ The Streamlit prototype includes:
 - Dashboard
 - VOC Analyzer
 - Taxonomy
-- Evaluation
+- Evaluation Lab
 
 ## AI classifier
 
@@ -92,7 +114,29 @@ Run the hand-labeled live smoke cases after configuring an API key:
 python -m evals.live_smoke_test
 ```
 
-The live smoke test makes billable API requests. Its results are exploratory and are not treated as final evaluation metrics.
+Run the v0.2 evaluation seed:
+
+```bash
+python -m evals.run_gold_eval
+```
+
+The default command saves predictions but will not calculate publishable metrics while
+the seed labels remain provisional.
+
+For development-only pipeline checks:
+
+```bash
+python -m evals.run_gold_eval --include-provisional
+```
+
+Any metrics produced with `--include-provisional` are exploratory and must not be
+presented as portfolio performance.
+
+Compare two evaluation summaries:
+
+```bash
+python -m evals.compare_runs evals/results/<baseline>_summary.json evals/results/<candidate>_summary.json
+```
 
 ## Result columns
 
@@ -103,13 +147,15 @@ The analyzer preserves every input column and appends classification, operationa
 - `input_tokens`, `cached_input_tokens`, `output_tokens`, `model`
 - `estimated_cost_usd` only when all three dated token-price environment variables are configured
 
+Evaluation runs additionally preserve explicit dataset/prompt/taxonomy versions.
+
 ## Project Structure
 
 ```text
 app/        Application code
 data/       Sample and processed datasets
 docs/       CX/VOC design documents
-evals/      Evaluation datasets and scripts
+evals/      Versioned evaluation datasets, runners, and result artifacts
 tests/      Automated tests
 ```
 
@@ -124,4 +170,7 @@ See `docs/api_costs.md` for pricing assumptions and the measurement plan. Token 
 
 ## Status
 
-v0.1 classifier hardening and the Streamlit analysis flow are implemented. The eight-case live smoke run still requires a locally configured API key; no live accuracy result is published in this repository.
+v0.1 classifier hardening is implemented. v0.2 evaluation infrastructure and a 200-row
+synthetic/provisional seed are implemented on the evaluation branch. Live model quality
+metrics still require an API key and human-reviewed labels; no accuracy or ROI result is
+claimed in this repository.
