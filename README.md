@@ -61,11 +61,19 @@ Then run:
 streamlit run app/main.py
 ```
 
-Run unit tests with:
+Run unit tests without a live API call:
 
 ```bash
 pytest
 ```
+
+Run the hand-labeled live smoke cases after configuring an API key:
+
+```bash
+python -m evals.live_smoke_test
+```
+
+The live smoke test makes billable API requests. Its results are exploratory and are not treated as final evaluation metrics.
 
 ## Project Structure
 
