@@ -5,6 +5,7 @@ import streamlit as st
 
 from app.services.batch import analyze_batch, summarize_results
 from app.services.llm import get_model_name, is_api_configured
+from app.services.pilot import PilotConfigurationError, get_batch_row_limit
 
 
 def read_uploaded_csv(uploaded_file) -> pd.DataFrame:
@@ -20,6 +21,12 @@ def read_uploaded_csv(uploaded_file) -> pd.DataFrame:
 st.title("VOC Analyzer")
 st.caption("Upload customer-support VOC data and convert it into structured CX operations fields.")
 
+try:
+    batch_row_limit = get_batch_row_limit()
+except PilotConfigurationError as exc:
+    st.error(str(exc))
+    st.stop()
+
 model_name = get_model_name()
 if is_api_configured():
     st.success(f"OpenAI API connected · model: `{model_name}`")
@@ -28,6 +35,11 @@ else:
         "OPENAI_API_KEY가 설정되어 있지 않습니다. "
         "CSV 미리보기는 가능하지만 AI 분석 실행 전 API 키 설정이 필요합니다."
     )
+
+st.info(
+    f"Pilot safety limit: 최대 {batch_row_limit:,}건/run · "
+    "테스트용 또는 비식별화된 VOC만 업로드하세요."
+)
 
 uploaded_file = st.file_uploader("Upload VOC CSV", type=["csv"])
 
@@ -42,6 +54,13 @@ if uploaded_file is not None:
         st.warning("CSV에 데이터가 없습니다.")
         st.stop()
 
+    if len(raw_df) > batch_row_limit:
+        st.error(
+            f"현재 Pilot 배포에서는 한 번에 최대 {batch_row_limit:,}건만 분석할 수 있습니다. "
+            f"업로드 파일은 {len(raw_df):,}건입니다."
+        )
+        st.stop()
+
     st.subheader("Input preview")
     st.dataframe(raw_df.head(20), width="stretch", hide_index=True)
 
@@ -53,7 +72,16 @@ if uploaded_file is not None:
         else 0,
     )
 
-    if st.button("Analyze VOC", type="primary", width="stretch"):
+    confirmed_safe_input = st.checkbox(
+        "업로드한 VOC는 테스트용 또는 비식별화된 데이터이며 실제 고객 개인정보를 포함하지 않습니다."
+    )
+
+    if st.button(
+        "Analyze VOC",
+        type="primary",
+        width="stretch",
+        disabled=not confirmed_safe_input,
+    ):
         if not is_api_configured():
             st.error(
                 "OPENAI_API_KEY가 없어 분석을 시작할 수 없습니다. "
