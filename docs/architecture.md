@@ -49,4 +49,7 @@ The API key is read from the local environment and `.env` is ignored by Git. v0.
 
 ## Future modules
 
-`root_cause.py` and `trend_detector.py` remain placeholders. They should consume validated result rows only after the classifier has a larger labeled evaluation set.
+`app/services/trend_detector.py` is the v0.4 deterministic, offline aggregation and
+spike-detection core. It consumes preserved VOC result rows and remains independent
+of OpenAI, Supabase, and the human-review workflow. `app/pages/trend_detection.py`
+is still a placeholder for a later Trend UI, and `root_cause.py` remains out of scope.
